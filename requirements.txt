@@ -1,0 +1,10 @@
+requests
+numpy
+pandas
+selenium
+openpyxl
+datetime
+gspread
+df2gspread
+pygsheets
+google_auth_httplib2
