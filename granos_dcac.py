@@ -16,7 +16,7 @@ import pygsheets
 options = Options()
 options.add_argument("--headless")
 
-driver = webdriver.Chrome(executable_path=r'chromedriver.exe', options=options)
+driver = webdriver.Chrome(executable_path=r'C:/bin/chromedriver.exe', options=options)
 driver.get("https://www.decampoacampo.com/__dcac/")
 time.sleep(3)
 
@@ -44,6 +44,7 @@ for d in data_maiz_usd:
 desc_m = [dmu[0],dmu[4]]
 prec_m_usd = [dmu[1],dmu[5]]
 time.sleep(2)
+
 driver.find_element_by_xpath('//*[@id="vue-app"]/div/div[2]/div[1]/div[2]/span/button[1]').click()
 data_maiz_pes = driver.find_elements_by_tag_name('td')
 dmp = []
@@ -51,6 +52,10 @@ dmp = []
 for d in data_maiz_pes:
     dmp.append(d.text)
 prec_m_pes = [dmp[1],dmp[5]]
+
+# print(desc_m)
+# print(prec_m_usd)
+# print(prec_m_pes)
 
 time.sleep(5)
 
@@ -68,6 +73,7 @@ for d in data_soja_usd:
 desc_s = [dsu[0],dsu[4]]
 prec_s_usd = [dsu[1],dsu[5]]
 time.sleep(5)
+
 driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/span/button[1]').click()
 data_soja_pes = driver.find_elements_by_tag_name('td')
 dsp = []
