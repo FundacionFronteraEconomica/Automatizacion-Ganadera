@@ -28,7 +28,7 @@ for dato in tabla:
 tab
 
 time.sleep(5)
-driver.find_element_by_xpath('/html/body/div/header/nav/a/div/i').click()
+driver.find_element_by_xpath('/html/body/div/header/nav/a/div/div[2]').click()
 time.sleep(5)
 dolar = driver.find_element_by_xpath("//span[@class='price']").text
 dolar = dolar.replace("$ ","").replace(",",".")
