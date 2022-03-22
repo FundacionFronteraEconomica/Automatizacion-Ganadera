@@ -27,7 +27,7 @@ for dato in tabla:
     tab.append(dato.text)
 tab
 
-time.sleep(2)
+time.sleep(5)
 driver.find_element_by_xpath('/html/body/div/header/nav/a/div/i').click()
 time.sleep(5)
 dolar = driver.find_element_by_xpath("//span[@class='price']").text
