@@ -122,7 +122,7 @@ fecha = str(fecha.strftime('%d/%m/%Y'))
 granos['Fecha'] = fecha
 granos = granos.reindex(columns=['Fecha','descripcion','pesosxtn','usdxtn'])
 
-granos['usdxtn'] = granos['usdxtn'].squeeze()
+# granos['usdxtn'] = granos['usdxtn'].squeeze()
 granos['usdxtn'] = granos['usdxtn'].map(lambda x: str(x).replace(',','.'))
 granos['usdxtn'] = pd.to_numeric(granos['usdxtn'], downcast='float', errors='coerce')
 granos['usdxtn'] = granos['usdxtn'].apply(lambda x: round(x, 1) if type(x) is float else x)
